@@ -1,22 +1,14 @@
-View = require 'views/base'
+styles = require('styles').ui
 
-module.exports = class MainView extends View
+{ Window } = require 'views/ui'
 
-  viewName: 'Window'
-
-  attributes:
-    backgroundColor: '#fff'
+module.exports = class MainView extends Window
 
   render: =>
 
-    @view.add @make 'Label',
-      text: 'Kitchen Sink'
-      height: 'auto'
-      top: 20
-      textAlign: 'center'
-      color: '#000'
-      font:
-        fontSize: 20
-        fontWeight: 'bold'
+    @layout (view) =>
+
+      view.add @make 'Label', styles.labels.h1,
+        text: 'Kitchen Sink'
 
     @

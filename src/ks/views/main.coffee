@@ -1,14 +1,26 @@
 styles = require('styles').ui
 
-{ Window } = require 'views/ui'
+TabGroup = require 'views/ui/tabs/group'
 
-module.exports = class MainView extends Window
+module.exports = class MainView extends TabGroup
 
-  render: =>
+  initialize: ->
 
-    @layout (view) =>
+    layout =
+      title: 'Layout',
+      viewClass: require 'ks/views/layout'
+      icon: 'ks/layout.png'
 
-      view.add @make 'Label', styles.labels.h1,
-        text: 'Kitchen Sink'
+    tables =
+      title: 'Tables'
+      viewClass: require 'ks/views/tables'
+      icon: 'ks/tables.png'
 
-    @
+    forms =
+      title: 'Forms'
+      viewClass: require 'ks/views/forms'
+      icon: 'ks/forms.png'
+
+    @tabs = @buildTabs [ layout, tables, forms ]
+
+    super

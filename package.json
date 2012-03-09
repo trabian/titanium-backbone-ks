@@ -1,11 +1,12 @@
 {
   "name": "titanium-backbone-ks",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Kitchen Sink examples for titanium-backbone",
   "private": true,
   "stitch": {
     "paths": [
       "src"
-    ]
+    ],
+    "images": "vendor/images"
   }
 }

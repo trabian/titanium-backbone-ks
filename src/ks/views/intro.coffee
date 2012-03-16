@@ -6,26 +6,34 @@ module.exports = class IntroView extends Window
 
   render: =>
 
-    @layout (view) =>
+    @view.addEventListener 'open', =>
+      # Skip the entry screen during development
+      @openKitchenSink()
 
-      view.add @make 'Label', styles.labels.h1,
-        text: 'Welcome to your mobile app'
+      return
 
-      contentBlock = new ContentBlock
-        text: '''
-          The Kitchen Sink project was included in this bootstrapped app as an example
-          of user interface elements and coding style for titanium-backbone. To remove
-          the kitchen sink, simply remove the titanium-backbone-ks module from package.json
-          and remove the reference to 'KitchenSinkIntroView' from src/index.coffee
-        '''
+    unless true
 
-      view.add contentBlock.render().view
+      @layout (view) =>
 
-      button = new Button
-        text: 'Launch Kitchen Sink'
-        click: @openKitchenSink
+        view.add @make 'Label', styles.labels.h1,
+          text: 'Welcome to your mobile app'
 
-      view.add button.render().view
+        contentBlock = new ContentBlock
+          text: '''
+            The Kitchen Sink project was included in this bootstrapped app as an example
+            of user interface elements and coding style for titanium-backbone. To remove
+            the kitchen sink, simply remove the titanium-backbone-ks module from package.json
+            and remove the reference to 'KitchenSinkIntroView' from src/index.coffee
+          '''
+
+        view.add contentBlock.render().view
+
+        button = new Button
+          text: 'Launch Kitchen Sink'
+          click: @openKitchenSink
+
+        view.add button.render().view
 
     @
 

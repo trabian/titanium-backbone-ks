@@ -21,6 +21,6 @@ module.exports = class MainView extends TabGroup
       viewClass: require 'ks/views/forms'
       icon: 'ks/forms.png'
 
-    @tabs = @buildTabs [ layout, tables, forms ]
+    @options.items = [ tables, layout, forms ]
 
     super

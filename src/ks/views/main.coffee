@@ -21,6 +21,11 @@ module.exports = class MainView extends TabGroup
       viewClass: require 'ks/views/forms'
       icon: 'ks/forms.png'
 
-    @options.items = [ tables, layout, forms ]
+    github =
+      title: 'GitHub'
+      viewClass: require 'ks/views/github'
+      icon: 'ks/github.png'
+
+    @options.items = [ tables, github, layout, forms ]
 
     super

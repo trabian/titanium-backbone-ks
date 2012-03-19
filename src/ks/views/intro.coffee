@@ -39,8 +39,6 @@ module.exports = class IntroView extends Window
 
   openKitchenSink: ->
 
-    console.log 'Open the kitchen sink.'
-
     KitchenSink = require './main'
 
     kitchenSink = new KitchenSink

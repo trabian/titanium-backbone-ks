@@ -3,6 +3,10 @@
   "version": "0.0.3",
   "description": "Kitchen Sink examples for titanium-backbone",
   "private": true,
+  "dependencies":
+  {
+    "backbone-github": "git+ssh://git@github.com:trabian/backbone-github.git#master"
+  },
   "stitch": {
     "paths": [
       "src"

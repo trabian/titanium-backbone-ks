@@ -1,11 +1,19 @@
 {
   "name": "titanium-backbone-ks",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Kitchen Sink examples for titanium-backbone",
-  "private": true,
+  "homepage": "https://github.com/trabian/titanium-backbone-ks",
+  "author": {
+    "name": "Matt Dean",
+    "email": "matt@trabian.com"
+  },
+  "bugs": {
+    "url": "https://github.com/trabian/titanium-backbone-ks/issues",
+    "email": "matt@trabian.com"
+  },
   "dependencies":
   {
-    "backbone-github": "git+ssh://git@github.com:trabian/backbone-github.git#master"
+    "backbone-github": "0.0.x"
   },
   "stitch": {
     "paths": [

@@ -14,9 +14,11 @@ module.exports = class GitHubLogin extends FormWindow
     @presenter = new Form
       model: @model
       fields: @buildFields()
+      updateOnly: true
 
-    @bindTo @model, 'sync', =>
+    @bindTo @model, 'change:username', =>
       @close()
+      @model.fetch()
 
     @options.saveButton = 'Login'
 

@@ -1,6 +1,6 @@
 {
   "name": "titanium-backbone-ks",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Kitchen Sink examples for titanium-backbone",
   "private": true,
   "dependencies":

@@ -37,11 +37,4 @@ module.exports = class GitHubLogin extends FormWindow
       as: 'password'
       required: true
 
-    body =
-      key: 'body'
-      label: 'Body'
-      hint: 'Comment'
-      as: 'textarea'
-      section: 'none'
-
-    [ username, password, body ]
+    [ username, password ]

@@ -11,10 +11,6 @@
     "url": "https://github.com/trabian/titanium-backbone-ks/issues",
     "email": "matt@trabian.com"
   },
-  "dependencies":
-  {
-    "backbone-github": "0.0.x"
-  },
   "stitch": {
     "paths": [
       "src"

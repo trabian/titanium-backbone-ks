@@ -1,31 +1,16 @@
-styles = require('styles').ui
+module.exports = class Window extends Backbone.View
 
-TabGroup = require 'views/ui/tabs/group'
+  viewName: 'Window'
 
-module.exports = class MainView extends TabGroup
+  attributes:
+    backgroundColor: '#eee'
 
-  initialize: ->
+  render: ->
 
-    layout =
-      title: 'Layout',
-      viewClass: require 'ks/views/layout'
-      icon: 'ks/layout.png'
+    Backbone.$('<Label>')
+      .attr('text', 'Installation was successful!')
+      .appendTo @$el
 
-    tables =
-      title: 'Tables'
-      viewClass: require 'ks/views/tables'
-      icon: 'ks/tables.png'
+    @
 
-    forms =
-      title: 'Forms'
-      viewClass: require 'ks/views/forms'
-      icon: 'ks/forms.png'
-
-    github =
-      title: 'GitHub'
-      viewClass: require 'ks/views/github'
-      icon: 'ks/github.png'
-
-    @options.items = [ tables, layout, forms, github ]
-
-    super
+  open: -> @render().el.open()

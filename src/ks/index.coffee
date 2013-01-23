@@ -1,7 +1,12 @@
-require('tb/lib/backbone-extensions').load()
-
 module.exports =
 
-  run: ->
+  run: (options) ->
+
+    if options
+      require('tb').load options
+
+    model = new Backbone.Model
+      name: 'John Doe'
+
     MainView = require 'ks/views/main'
-    (new MainView).open()
+    (new MainView { model }).open()

@@ -1,0 +1,27 @@
+$vertical-space = 11px
+
+@import 'tb'
+
+Window
+  backgroundColor #eee
+
+TextField
+  @extend TextField.rounded
+  bottom $vertical-space
+
+Label
+
+  &.reversed-name
+    paragraph(16px)
+
+  &.error
+    color #f00 !important
+
+View
+
+  &.buttons
+    @extend View.row
+    size(height)
+    top $vertical-space
+    Button
+      width: 50%

@@ -1,15 +1,29 @@
+template = require './template'
+
 module.exports = class Window extends Backbone.View
 
-  viewName: 'Window'
+  tagName: 'Window'
 
-  attributes:
-    backgroundColor: '#eee'
+  events: ->
+    'click Button.clickable': => alert "Told you so, #{@model.get 'name'}!"
+
+  bindings:
+    'TextField': 'name'
+    '.reversed-name':
+      observe: 'name'
+      onGet: 'reverse'
+
+  reverse: (val) ->
+    if val
+      "In reverse: #{val.split('').reverse().join('')}"
 
   render: ->
 
-    Backbone.$('<Label>')
-      .attr('text', 'Installation was successful!')
-      .appendTo @$el
+    @$el.html template
+      title: 'Installation was successful using Jade!'
+      subtitle: 'This is a subtitle'
+
+    @stickit()
 
     @
 

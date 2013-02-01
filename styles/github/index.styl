@@ -1,0 +1,21 @@
+Window.github-repos
+
+  TableView
+    @extend TableView.inline
+
+  TableViewRow
+
+    hasChild true
+
+    layout horizontal
+
+    Label
+
+      fill(height)
+
+      &.owner
+        @extend Label.muted
+        left 11
+        font 14px
+      &.name
+        font 14px bold

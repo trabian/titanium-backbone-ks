@@ -5,8 +5,15 @@ module.exports =
     if options
       require('tb').load options
 
-    model = new Backbone.Model
-      name: 'John Doe'
+    { RepoCollection } = require 'ks/github/models/repo'
 
-    MainView = require 'ks/views/main'
-    (new MainView { model }).open()
+    ReposView = require 'ks/github/views/repos'
+
+    repos = new RepoCollection
+
+    reposView = new ReposView
+      collection: repos
+
+    reposView.el.open()
+
+    repos.fetch()

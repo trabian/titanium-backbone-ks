@@ -4,7 +4,7 @@ class RepoCollection extends Backbone.Collection
 
   model: Repo
 
-  url: 'https://api.github.com/users/trabianmatt/repos'
+  url: 'https://api.github.com/users/trabian/repos'
 
 module.exports = { Repo, RepoCollection }
 

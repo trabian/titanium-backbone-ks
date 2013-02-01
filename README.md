@@ -5,6 +5,6 @@ early.
 
 If you run this app from within titanium-backbone, though, you'll currently see this:
 
-![Sample App](https://api.monosnap.com/image/download?id=kYd6NRTIYUe4ZyUpHqvOZMfgX)
+![Sample App](https://raw.github.com/wiki/trabian/titanium-backbone-ks/github_app_screenshot.jpg)
 
 Not bad considering how little code is required to create it!

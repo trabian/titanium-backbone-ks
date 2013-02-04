@@ -7,3 +7,6 @@ module.exports = class RepoView extends View
   className: 'github-repo'
 
   template: require './template'
+
+  attributes: ->
+    title: @model.get 'name'

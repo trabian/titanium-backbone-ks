@@ -11,3 +11,6 @@ module.exports = class ReposView extends CollectionView
   template: require './template'
 
   itemView: require './row'
+
+  attributes:
+    title: 'Repos'

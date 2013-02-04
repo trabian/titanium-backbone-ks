@@ -1,0 +1,22 @@
+{
+  "framework": "mocha",
+  "before_tests": "node_modules/.bin/cake build:test",
+  "src_files": [
+    "src/**/*.coffee",
+    "node_modules/titanium-backbone/src/**/*.coffee",
+    "test/**/*.coffee",
+    "test/**/*.styl",
+    "ti/dist.js",
+    "lib/**/*.coffee",
+    "vendor/*.js"
+  ],
+  "launch_in_dev": [
+    "Mocha"
+  ],
+  "launchers": {
+    "Mocha": {
+      "command": "node_modules/.bin/mocha",
+      "protocol": "tap"
+    }
+  }
+}

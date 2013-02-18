@@ -12,7 +12,7 @@
     "email": "matt@trabian.com"
   },
   "scripts": {
-    "preinstall": "cd node_modules/titanium-backbone; npm install"
+    "develop": "./develop.sh"
   },
   "dependencies": {
     "titanium": "3.0.x",

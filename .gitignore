@@ -1,3 +1,9 @@
 node_modules
 npm-debug.log
 .DS_Store
+Resources/generated/*.js
+tmp
+build
+tiapp.xml
+.stitch_source
+test.js

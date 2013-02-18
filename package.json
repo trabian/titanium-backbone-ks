@@ -11,6 +11,9 @@
     "url": "https://github.com/trabian/titanium-backbone-ks/issues",
     "email": "matt@trabian.com"
   },
+  "scripts": {
+    "preinstall": "cd node_modules/titanium-backbone; npm install"
+  },
   "dependencies": {
     "titanium": "3.0.x",
     "titanium-backbone": "0.5.3"
@@ -23,10 +26,21 @@
     "libxmljs": "0.6.x",
     "underscore": "1.4.x"
   },
+  "mobile": {
+    "id":"com.trabian.titanium_backbone_ks",
+    "name":"titanium-backbone-ks",
+    "puburl":"http://www.trabian.com"
+  },
+  "stylus": {
+    "output": "Resources/generated/styles.js",
+    "main": "styles/main.styl",
+    "paths": ["styles"]
+  },
   "stitch": {
     "identifier":"stitchRequire",
     "output": {
-      "test": "test.js"
+      "test": "test.js",
+      "app": "Resources/generated/app-impl.js"
     },
     "paths": [
       "src"

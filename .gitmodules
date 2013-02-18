@@ -1,0 +1,3 @@
+[submodule "submodules/titanium-backbone"]
+	path = submodules/titanium-backbone
+	url = git@github.com:trabian/titanium-backbone.git

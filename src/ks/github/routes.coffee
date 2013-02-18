@@ -1,5 +1,5 @@
 module.exports = (match) ->
 
-  match '', 'issues'
+  match '', 'repos'
 
-  match '/issues/:id', 'issues#show'
+  match '/repos/:id', 'repos#show'

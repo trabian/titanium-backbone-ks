@@ -5,7 +5,7 @@ Chaplin = require 'chaplin'
 RepoView = require 'ks/github/views/repos/repo'
 ReposView = require 'ks/github/views/repos'
 
-module.exports = class IssuesController extends Chaplin.Controller
+module.exports = class ReposController extends Chaplin.Controller
 
   index: ->
 

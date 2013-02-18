@@ -9,6 +9,6 @@ module.exports = class RepoView extends View
   events: { 'click' }
 
   click: ->
-
-    Backbone.history.navigate "/issues/#{@model.id}",
+    Backbone.history.navigate "/repos/#{@model.id}",
       model: @model
+

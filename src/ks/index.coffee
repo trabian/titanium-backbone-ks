@@ -7,5 +7,4 @@ module.exports =
 
     GithubApplication = require 'ks/github/application'
 
-    app = new GithubApplication()
-    app.initialize()
+    (new GithubApplication).initialize()
